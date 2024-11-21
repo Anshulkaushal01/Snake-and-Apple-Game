@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.body {
+    background: url("bg.jpg"); 
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 1200px) {
+   .body{
+    flex-wrap: wrap;
+   }
+  }
+#scoreBox {
+    position: absolute;
+    top: 9px;
+    right: 200px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#hiscoreBox {
+    position: absolute;
+    top: 59px;
+    right: 140px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#board {
+    background: linear-gradient(rgb(0, 255, 8), rgb(251, 251, 4));
+    box-shadow: 0px 0px 50px 10px rgb(255, 0, 0);
+    width: 90vmin;
+    height: 92vmin;
+    border: 5px solid rgb(0, 0, 0);
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+
+.head {
+    background: linear-gradient(rgb(248, 0, 0), rgb(255, 255, 0));
+    border: 2px solid rgb(34, 4, 34); 
+    box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
+    transform: scale(1.02);
+    border-radius: 9px;
+}
+
+.snake {
+    background-color: purple;
+    border: .25vmin solid white;
+    border-radius: 12px;
+}
+
+.food {
+    display: none; /* Remove this class or keep it for potential future use */
+}
+
+/* Controls Styles */
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px; /* Add some margin to separate from the game board */
+}
+
+.horizontal-controls {
+    display: flex;
+    justify-content: center;
+}
+
+.arrow {
+    font-size: 30px; /* Size of the arrow buttons */
+    cursor: pointer;  /* Change cursor to pointer on hover */
+    margin: 5px;     /* Spacing between buttons */
+    padding: 20px;   /* Padding inside buttons */
+    border: 2px solid black;    /* Remove default button border */
+    background-color: #007bff; /* Background color for buttons */
+    color: white;    /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background color change */
+}
+.right{
+    margin: 100px;
+}
+.left{
+    margin: 100px;
+}
+
+.arrow:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .arrow {
+        margin: 20px;
+        font-size: 30px; /* Smaller button size for mobile */    
+    }
+    .right{
+        margin: 100px;
+    }
+    .left{
+        margin: 100px;
+    }
+
+}
